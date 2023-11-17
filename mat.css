@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,800&family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300&display=swap');
+
+.html {
+    scroll-behavior: smooth;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f8ff;
+    color: #333;
+}
+
+.container {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    display: inline;
+    padding-top: 19px;
+}
+
+.home i {
+    padding-left: 29px;
+
+    &:hover {
+        color: burlywood;
+    }
+}
+
+.cart i {
+    font-size: 24px;
+    margin-right: 1px;
+    color: #f8f8ff;
+
+    &:hover {
+        color: burlywood;
+    }
+}
+
+.profile-pic {
+    display: inline;
+    cursor: pointer;
+    padding-left: 50px;
+    vertical-align: top;
+}
+
+.profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid orangered;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f7f6f4;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    z-index: 1;
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+
+.dropdown-content a:nth-child(1) {
+    word-spacing: normal;
+
+}
+
+.dropdown-content a:nth-child(2) {
+    word-spacing: normal;
+
+}
+
+
+.dropdown-content a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: teal;
+}
+
+.dropdown-content a:hover {
+    color: black;
+}
+
+.home,
+.search-container,
+.cart,
+.profile-pic {
+    display: inline-flex;
+    align-items: center;
+}
+
+.search-container {
+    padding-left: 50vw;
+    width: 300px;
+}
+
+.cart {
+    padding-left: 200px;
+    padding-top: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.cart,
+.home:hover {
+    text-decoration: underline;
+    transition: ease-in-out;
+    cursor: pointer;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    outline: none;
+}
+
+button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 0 50px 50px 0;
+}
+
+
+
+.back1 {
+    background-image: url(adorable-looking-kitten-with-dog.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+.back2 .li {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 11rem;
+
+}
+.content{
+    margin: 10px;
+}
+.a-image {
+    float: right;
+    padding-top: 4px;
+    margin-right: 15px;
+    image-rendering:pixelated;
+    box-shadow: 0 14px 28px burlywood,
+        0 10px 10px burlywood;
+    transform: translate(0px, -8px);
+}
+
+a-cont {
+    margin: 15px;
+    float: left;
+    font-family: 'Poppins',sans-serif;
+    font-size: 30px;
+}
+#color{
+    color:burlywood;
+}
+.con{
+    font-weight: 500;
+    text-justify: distribute;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.side{
+    margin: 20px;
+    font-size:30px;
+    font-weight: 800;
+    color: orangered;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.holder{
+    display: flex; /* Use flex to arrange cards in a row */
+      justify-content: space-around;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    padding-left: 40vw;
+    font-size:30px;
+    font-weight: 800;
+    color: burlywood;
+  }
+
+  .switch-label {
+    margin-right: 10px;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  section{
+    margin: 20px;
+  }
+
+
+  .product-card {
+    width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .product-details {
+    padding: 15px;
+  }
+
+  .product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .product-info {
+    color: #777;
+    font-size: 0.9rem;
+  }
+
+  .contact-owner {
+    background-color: #ffcccb;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }
+
+  .contact-button {
+    background-color: #ff6666;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #pic{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+  }
+
+  footer {
+    text-align: center;
+    background-color: black;
+    color: #e3770c;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: burlywood;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#scrollToTopBtn:hover {
+    background-color: black;
+}
